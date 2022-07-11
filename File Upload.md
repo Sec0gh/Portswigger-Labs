@@ -81,6 +81,7 @@
 -----------------------------------------------------------------------
 ### Lab6: RCE via polyglot web shell upload
 -To increase the security level, The servers make a validation for the content of the file through the file signatures or it is called the **magic numbers(Magic bytes)**.
+
 Check out: [List of file signatures](https://en.wikipedia.org/wiki/List_of_file_signatures)
 
 Check out: [File Magic Numbers](https://gist.github.com/leommoore/f9e57ba2aa4bf197ebc5)
