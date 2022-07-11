@@ -79,9 +79,10 @@
 -----------------------------------------------------------------------
 ### Lab6: RCE via polyglot web shell upload
 -To increase the security level, The servers make a validation for the content of the file through the file signatures or it is called the **magic numbers(Magic bytes)**.
+
 Check out: [List of file signatures](https://en.wikipedia.org/wiki/List_of_file_signatures)
 Check out: [File Magic Numbers](https://gist.github.com/leommoore/f9e57ba2aa4bf197ebc5)
-#### The first solution:
+### The first solution:
 - At first, I uploaded a normal `png` image, Then I injected my malicious code within the content of the image.
 ![puttingMaliciousCode_lab6 1.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/File%20Upload%20Labs/images/puttingMaliciousCode_lab6.png)
 - And changed the extension of the image to `.php` to run my script which I put into the content of the image file.
@@ -90,7 +91,7 @@ Check out: [File Magic Numbers](https://gist.github.com/leommoore/f9e57ba2aa4bf1
 - My image has been uploaded successfully and the server didn't detect my PHP code within the content of the image.
 ![response_lab6 1.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/File%20Upload%20Labs/images/response_lab6.png)
 
-#### Another solution:
+### Another solution:
 - We will use the ExifTool to add a comment within the image file it is a PHP code and we will rename the image to a file with the extension of `.php`.
 
 ![exiftool_lab6.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/File%20Upload%20Labs/images/exiftool_lab6.png)
