@@ -1,8 +1,8 @@
 # `File Upload`
 
 ## Summary
-	- [Lab1: Remote code execution via web shell upload](#https://github.com/Sec0gh/Portswigger-Labs/blob/main/File%20Upload.md#lab1-remote-code-execution-via-web-shell-upload)
-	-[Lab2: Web shell upload via `Content-Type` restriction bypass](https://github.com/Sec0gh/Portswigger-Labs/blob/main/File%20Upload.md#lab2-web-shell-upload-via-content-type-restriction-bypass)
+  - [Lab1: Remote code execution via web shell upload](https://github.com/Sec0gh/Portswigger-Labs/blob/main/File%20Upload.md#lab1-remote-code-execution-via-web-shell-upload)
+  -[Lab2: Web shell upload via `Content-Type` restriction bypass](https://github.com/Sec0gh/Portswigger-Labs/blob/main/File%20Upload.md#lab2-web-shell-upload-via-content-type-restriction-bypass)
 ### Lab1: Remote code execution via web shell upload
 - In the first, When I tested what kind of file can I upload other than the image and I uploaded a file with the extension `.php`, the server accepted it.
 - when I uploaded my file, this path for my uploaded file appeared but I noted it is not the full path for the file because when I uploaded an image and saw the path I found the path like that `/files/avatars/image.png`.
