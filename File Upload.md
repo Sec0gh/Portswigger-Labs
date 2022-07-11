@@ -69,8 +69,8 @@
 	2. Adding trailing characters like dot or whitespace: `EX:` exploit.php.
 	3. Use the URL encoding or URL double encoding for the dot of the extension.
 	4. We can use semicolons or URL encoded Null byte:
-
-		`EX:` ==> exploit.php;.png                  ==> exploit.php%00.jpg 
+	`EX:` - exploit.php;.png 
+	      - exploit.php%00.jpg 
 - There are more techniques you can use to obfuscate the file extension.
 
 - Here I used a null byte to bypass the validation for the filename.
