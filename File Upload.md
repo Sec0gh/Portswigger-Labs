@@ -91,7 +91,7 @@ Check out: [File Magic Numbers](https://gist.github.com/leommoore/f9e57ba2aa4bf1
 
 -----------------------------------------------------------------------
 ### Lab7: Web shell upload via race condition
-- A race condition is a flaw that produces an unexpected result or behavior when timing of actions impact other actions.
+- A `race condition` is a flaw that produces an unexpected result or behavior when timing of actions impact other actions.
 - Race conditions may occur when a process is critically or unexpectedly dependent on the sequence or timings of other events. In a web application environment, where multiple requests can be processed at a given time, developers may leave concurrency to be handled by the framework, server, or programming language. 
 - This vulnerability arises for a brief period of time under certain specific circumstances. Because the vulnerability exists only for a short time, an attacker “races” to exploit it before the application closes it again. 
 - But how does this vulnerability arises here with file upload?
