@@ -3,7 +3,7 @@
 - In the first, When I tested what kind of file can I upload other than the image and I uploaded a file with the extension `.php`, the server accepted it.
 - when I uploaded my file, this path for my uploaded file appeared but I noted it is not the full path for the file because when I uploaded an image and saw the path I found the path like that `/files/avatars/image.png`.
 
-![Path](https://github.com/Sec0gh/Portswigger-Labs/blob/main/File%20Upload%20Labs/images/path.png)
+[Path](https://github.com/Sec0gh/Portswigger-Labs/blob/main/File%20Upload%20Labs/images/path.png)
 - Then i accessed the full right path.
  
 ![[path_lab1.png]]
