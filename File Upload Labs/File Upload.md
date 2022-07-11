@@ -96,7 +96,7 @@ Check out: [File Magic Numbers](https://gist.github.com/leommoore/f9e57ba2aa4bf1
 ![response_lab6 1.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/File%20Upload%20Labs/images/response_lab6.png)
 
 ### Another solution:
-- We will use `ExifTool` to add a comment within the image file, it is a PHP code, and we will rename the image to a file with the extension of `.php`.
+- We will use `exiftool` to add a comment within the image file, it is a PHP code, and we will rename the image to a file with the extension of `.php`.
 
 ![exiftool_lab6.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/File%20Upload%20Labs/images/exiftool_lab6.png)
 - After uploading the file, which I created, I accessed the uploaded file, and I found the key.
