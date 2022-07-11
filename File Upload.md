@@ -30,8 +30,7 @@
 		   
 		![message lab2.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/File%20Upload%20Labs/images/message%20lab2.png)
 - Here we conclude that the server set the restriction to validate just this header to be an image type of png or jpeg, but we can bypass it easily by setting our malicious script other than the content of the image file. 
-##### `NOTE: `
-**Content-Type header**: Tells the server the MIME type of the data that was submitted using this input.
+#### `NOTE:` **Content-Type header**: Tells the server the MIME type of the data that was submitted using this input.
 
 ![lab2.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/File%20Upload%20Labs/images/lab2.png)
 
