@@ -100,12 +100,15 @@ Check out: [File Magic Numbers](https://gist.github.com/leommoore/f9e57ba2aa4bf1
 	- Sometimes the websites upload the files to the main filesystem to make its validations and randomizing, and don't use the sandbox to do that so if the file is not safe and didn't pass the validations, the server will remove it. Still, the attacker here can access this malicious script to run it before removing it, so here the race between the server and attacker arose. 
 
 - We will use an extension in Burp Suite called `Turbo Intruder`, we will set the `POST` request of uploading the file in the **noPayload** variable.
+
 ![extension_lab7.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/File%20Upload%20Labs/images/extension_lab7.png)
 - And then we added our payload with the `GET` request with the path for accessing the file from the server before removing it.
+ 
 ![payload_lab7.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/File%20Upload%20Labs/images/payload_lab7.png)
 - Here the first request has succeeded, and it takes a lower time to access the file from the server before it is removed.
 - And the second request took more time to make its validations.
 - So congrats, we won the race!!
+
 ![attack_done_lab7.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/File%20Upload%20Labs/images/attack_done_lab7.png)
 
 
