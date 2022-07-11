@@ -7,6 +7,8 @@
   - [Lab4: Web shell upload via extension blacklist bypass](https://github.com/Sec0gh/Portswigger-Labs/blob/main/File%20Upload.md#lab4-web-shell-upload-via-extension-blacklist-bypass)
   - [Lab5: Web shell upload via obfuscated file extension](https://github.com/Sec0gh/Portswigger-Labs/blob/main/File%20Upload.md#lab5-web-shell-upload-via-obfuscated-file-extension)
   - [Lab6: RCE via polyglot web shell upload](https://github.com/Sec0gh/Portswigger-Labs/blob/main/File%20Upload.md#lab6-rce-via-polyglot-web-shell-upload)
+  	- [The first solution]()
+  	- [Another solution]()
   - [Lab7: Web shell upload via race condition](https://github.com/Sec0gh/Portswigger-Labs/blob/main/File%20Upload.md#lab7-web-shell-upload-via-race-condition)
 ### Lab1: Remote code execution via web shell upload
 - In the first, When I tested what kind of file can I upload other than the image and I uploaded a file with the extension `.php`, the server accepted it.
@@ -81,6 +83,7 @@
 -To increase the security level, The servers make a validation for the content of the file through the file signatures or it is called the **magic numbers(Magic bytes)**.
 
 Check out: [List of file signatures](https://en.wikipedia.org/wiki/List_of_file_signatures)
+
 Check out: [File Magic Numbers](https://gist.github.com/leommoore/f9e57ba2aa4bf197ebc5)
 ### The first solution:
 - At first, I uploaded a normal `png` image, Then I injected my malicious code within the content of the image.
