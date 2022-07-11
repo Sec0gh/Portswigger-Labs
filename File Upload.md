@@ -65,8 +65,8 @@
 ### Lab5: Web shell upload via obfuscated file extension
 - There are some techniques it is called **obfuscation techniques** to bypass the blacklists for the extension.
 - There are many techniques to use:
-	1. Adding multiple extensions:```EX: exploit.php.jpg```  
-	3. Adding trailing characters like dot or whitespace: ```EX: exploit.php.```
+	1. Adding multiple extensions:```exploit.php.jpg```  
+	3. Adding trailing characters like dot or whitespace: ```exploit.php.```
 	4. Use the URL encoding or URL double encoding for the dot of the extension.
 	5. We can use semicolons or URL encoded Null byte:
 	```exploit.php;.png``` 
