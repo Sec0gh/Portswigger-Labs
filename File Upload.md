@@ -3,13 +3,13 @@
 - In the first, When I tested what kind of file can I upload other than the image and I uploaded a file with the extension `.php`, the server accepted it.
 - when I uploaded my file, this path for my uploaded file appeared but I noted it is not the full path for the file because when I uploaded an image and saw the path I found the path like that `/files/avatars/image.png`.
 
-(https://github.com/Sec0gh/Portswigger-Labs/blob/main/File%20Upload%20Labs/images/path.png)
+![path.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/File%20Upload%20Labs/images/path.png)
 - Then i accessed the full right path.
  
-![[path_lab1.png]]
+![path_lab1.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/File%20Upload%20Labs/images/path_lab1.png)
 - I will run my PHP script and reload the previous path to display the file's content.
 
-![[lab1.png]]
+![lab1.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/File%20Upload%20Labs/images/lab1.png)
 - Here we find the restrictions in the server are very low because it does not validate and sanitize the name, type, content, or size of the file you uploaded.
 -----------------------------------------------------------------------
 
@@ -19,26 +19,26 @@
 	2. I changed the content of the image and replaced it with the malicious script, send and didn't happen anything strange.
 	3. In the last, I tried to change the `Content-Type` header but here caused this message:
 		   
-	![[message lab2.png]]
+		![message lab2.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/File%20Upload%20Labs/images/message%20lab2.png)
 - Here we conclude that the server set the restriction to validate just this header to be an image type of png or jpeg, but we can bypass it easily by setting our malicious script other than the content of the image file. 
 ##### `NOTE: `
 **Content-Type header**: Tells the server the MIME type of the data that was submitted using this input.
 
-![[lab2.png]]
+![lab2.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/File%20Upload%20Labs/images/lab2.png)
 
 -----------------------------------------------------------------------
 ### Lab3: Web shell upload via path traversal
 - Some servers if you bypassed the validation and sanitization, it prevent executing any scripts in the same directory of files which uploaded in, and if you tried to access the file to execute it will appear for you as plaintext in the browser like this image:
  
-![[plaingtext_lab3.png]]
+![plaingtext_lab3.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/File%20Upload%20Labs/images/plaingtext_lab3.png)
 
 - So the solution for it is to try to upload this script in another directory other than the default directory for the uploaded files. 
 - We will try to use the `directory traversal` vulnerability if it is found to change the directory to another one to execute the script.
 
-![[path traversal_lab3.png]]
+![path traversal_lab3.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/File%20Upload%20Labs/images/path%20traversal_lab3.png)
 - I will use URL encoding to bypass the path.
 
-![[bypassing_lab3.png]]
+![bypassing_lab3.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/File%20Upload%20Labs/images/bypassing_lab3.png)
 - Here from the response, we find the file has been uploaded with the path traversal which I did.
 - Now I can access the file with this path `/files/rce.php`.
 -----------------------------------------------------------------------
@@ -46,11 +46,11 @@
 - Some configured servers add the dangerous file extensions to the blacklist to prevent the end-user from uploading any malicious script.
 - When I tried to upload my malicious script to the server, it doesn't allow to me to upload the `.PHP` extension.
 
-![[error_message_lab4.png]]
+![error_message_lab4.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/File%20Upload%20Labs/images/error_message_lab4.png)
 - But we can bypass it by using some of the lesser-known alternative file extensions to try to upload our file, I tried some extensions from [Hacktricks.](https://book.hacktricks.xyz/pentesting-web/file-upload#file-upload-general-methodology)
 - I tried this extension `.phtml` and it has worked.
 
-![[response_lab4.png]]
+![response_lab4.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/File%20Upload%20Labs/images/response_lab4.png)
 
 -----------------------------------------------------------------------
 ### Lab5: Web shell upload via obfuscated file extension
@@ -65,7 +65,7 @@
 
 - Here I used a null byte to bypass the validation for the filename.
 
-![[bypass_lab5.png]]
+![bypass_lab5.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/File%20Upload%20Labs/images/bypass_lab5.png)
 
 -----------------------------------------------------------------------
 ### Lab6: RCE via polyglot web shell upload
@@ -74,20 +74,20 @@ Check out: [List of file signatures](https://en.wikipedia.org/wiki/List_of_file_
 Check out: [File Magic Numbers](https://gist.github.com/leommoore/f9e57ba2aa4bf197ebc5)
 #### The first solution:
 - At first, I uploaded a normal `png` image, Then I injected my malicious code within the content of the image.
-![[puttingMaliciousCode_lab6 1.png]]
+![puttingMaliciousCode_lab6 1.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/File%20Upload%20Labs/images/puttingMaliciousCode_lab6.png)
 - And changed the extension of the image to `.php` to run my script which I put into the content of the image file.
 
-![[changeTheExtension_lab6.png]]
+![changeTheExtension_lab6.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/File%20Upload%20Labs/images/changeTheExtension_lab6.png)
 - My image has been uploaded successfully and the server didn't detect my PHP code within the content of the image.
-![[response_lab6 1.png]]
+![response_lab6 1.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/File%20Upload%20Labs/images/response_lab6.png)
 
 #### Another solution:
 - We will use the ExifTool to add a comment within the image file it is a PHP code and we will rename the image to a file with the extension of `.php`.
 
-![[exiftool_lab6.png]]
+![exiftool_lab6.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/File%20Upload%20Labs/images/exiftool_lab6.png)
 - After uploading the file, which I created, I accessed the uploaded file, and I found the key.
  
-![[thekey_lab6.png]]
+![thekey_lab6.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/File%20Upload%20Labs/images/thekey_lab6.png)
 
 -----------------------------------------------------------------------
 ### Lab7: Web shell upload via race condition
@@ -100,13 +100,13 @@ Check out: [File Magic Numbers](https://gist.github.com/leommoore/f9e57ba2aa4bf1
 	- Sometimes the websites upload the files to the main filesystem to make its validations and randomizing, and don't use the sandbox to do that so if the file is not safe and didn't pass the validations, the server will remove it. Still, the attacker here can access this malicious script to run it before removing it, so here the race between the server and attacker arose. 
 
 - We will use an extension in Burp Suite called `Turbo Intruder`, we will set the `POST` request of uploading the file in the **noPayload** variable.
-![[extension_lab7.png]]
+![extension_lab7.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/File%20Upload%20Labs/images/extension_lab7.png)
 - And then we added our payload with the `GET` request with the path for accessing the file from the server before removing it.
-![[payload_lab7.png]]
+![payload_lab7.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/File%20Upload%20Labs/images/payload_lab7.png)
 - Here the first request has succeeded, and it takes a lower time to access the file from the server before it is removed.
 - And the second request took more time to make its validations.
 - So congrats, we won the race!!
-![[attack_done_lab7.png]]
+![attack_done_lab7.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/File%20Upload%20Labs/images/attack_done_lab7.png)
 
 
 
