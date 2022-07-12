@@ -1,7 +1,7 @@
 # `File Upload`
 
 ## Summary
-  - [Lab1: Remote code execution via web shell upload](https://github.com/Sec0gh/Portswigger-Labs/blob/main/File%20Upload%20Labs/File%20Upload.md#lab1-remote-code-execution-via-web-shell-upload)
+  - [Lab1: Remote code execution via web shell upload](https://github.com/Sec0gh/Portswigger-Labs/tree/main/File%20Upload%20Labs#lab1-remote-code-execution-via-web-shell-upload)
   - [Lab2: Web shell upload via Content-Type restriction bypass](https://github.com/Sec0gh/Portswigger-Labs/blob/main/File%20Upload%20Labs/File%20Upload.md#lab2-web-shell-upload-via-content-type-restriction-bypass)
   - [Lab3: Web shell upload via path traversal](https://github.com/Sec0gh/Portswigger-Labs/blob/main/File%20Upload%20Labs/File%20Upload.md#lab3-web-shell-upload-via-path-traversal)
   - [Lab4: Web shell upload via extension blacklist bypass](https://github.com/Sec0gh/Portswigger-Labs/blob/main/File%20Upload%20Labs/File%20Upload.md#lab4-web-shell-upload-via-extension-blacklist-bypass)
