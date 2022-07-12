@@ -1,4 +1,4 @@
-# `File Upload`
+# File Upload
 
 ## Summary
   - [Lab1: Remote code execution via web shell upload](https://github.com/Sec0gh/Portswigger-Labs/tree/main/File%20Upload%20Labs#lab1-remote-code-execution-via-web-shell-upload)
