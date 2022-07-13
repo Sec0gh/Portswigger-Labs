@@ -211,7 +211,8 @@ ${product.getClass().getProtectionDomain().getCodeSource().getLocation().toURI()
 - We will add `/etc/passwd` as an avatar for the first argument.
 - The template will tell us that the method need to the MIME type for tha avatar as the second argument.
 
->**`Take Note`: A media type** (also known as a **Multipurpose Internet Mail Extensions or MIME type**) indicates the nature and format of a document, file, or assortment of bytes.
+>**`Take Note:` A media type** (also known as a **Multipurpose Internet Mail Extensions or MIME type**) indicates the nature and format of a document, file, or assortment of bytes.
+
 Check out: [Common MIME Types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)
 
 ![setArguments_lab7](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/setArguments_lab7.png)
