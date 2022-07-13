@@ -18,7 +18,7 @@
 - The error tell us, it is an `erb` template.
 - ok, after i detected and idenfied the template, i have read the documentaion of the erb.
 
-> Check out this : https://docs.ruby-lang.org/en/2.3.0/ERB.html
+> Check out this : [docs.ruby-lang.org](https://docs.ruby-lang.org/en/2.3.0/ERB.html)
 
 - you can use this syntax to write your code: `<%= someExpression %>`. 
 - you can use the `system()` method to execute arbitrary system commands.
@@ -43,7 +43,7 @@
 	-   `{%` - Used to mark the start of a block statement.
 	-   `%}` - Used to mark the end of a block statement.
 
-- Check out it: https://www.tornadoweb.org/en/stable/template.html
+- Check out it: [tornadoweb.org](https://www.tornadoweb.org/en/stable/template.html)
 
 * In the server side will take and compile the code as this will open `{{` then will take the value from the parameter and close with `}}`
 * It will compile this code in order.
