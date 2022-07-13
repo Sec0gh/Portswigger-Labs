@@ -128,8 +128,8 @@ At the first when it tried this payload `{{7 * 7}}`, I got this error:
 
 > It is wrong to enable `DEBUG` during developing your project because it causes the leak of some data and objects in your project.
 - Check out these resources:
-	- https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/#debug
-	- https://docs.djangoproject.com/en/4.0/ref/settings/#debug
+	- [Enable DEBUG](https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/#debug)
+	- [DEBUG](https://docs.djangoproject.com/en/4.0/ref/settings/#debug)
 
 - So if we run this payload `{% debug %}` in the template, Django will display a detailed traceback, including a lot of metadata about the environment.
 
@@ -138,7 +138,7 @@ At the first when it tried this payload `{{7 * 7}}`, I got this error:
 - The output will contain a list of objects and properties to which you have access within this template. Crucially, notice that you can access the settings object.
 - When you create a new Django project using `startproject`, the settings.py file is generated automatically, so here notice that you can access the `settings` object.
 - And there is a `SECRET_KEY` attribute in the settings.
-- Check out: https://docs.djangoproject.com/en/4.0/ref/settings/#secret-key
+- Check out: [SECRET_KEY](https://docs.djangoproject.com/en/4.0/ref/settings/#secret-key)
 
 - **Finally, you will use this payload to get the secret key:** `{{settings.SECRET_KEY}}`
 
