@@ -13,7 +13,7 @@
 - I  will use it in my payload to identify the type of the template in the website in order to identify the correct syntax for this template.
 - Because the resulting error message will tell me exactly what is the template engine.
 - I tried `<%foobar%>` as a test payload, but you can try any of the others, the main target is to know the template type.
-[Lab1](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/lab1.png)
+![Lab1](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/lab1.png)
 
 - The error tell us, it is an `erb` template.
 - ok, after i detected and idenfied the template, i have read the documentaion of the erb.
@@ -32,7 +32,7 @@
 ### Lab2: Basic SSTI (code context)
 - I will inject any invalid syntax for reading the error message to know the template engine.
 
-[Lab2](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/lab2.png)
+![Lab2](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/lab2.png)
 
 - the syntax code in the `tornado` template ==> {{user.nickname}}
 - it is using python syntax in the code and the template syntax is:
@@ -72,16 +72,17 @@
 - As usual, i tried to cause any errors in the template.
 - I have seen this formt `${.....}` then i edited it to `${foobar}`
      
-[Lab3](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/Lab3.png)
+![Lab3](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/Lab3.png)
 
-[freemarker_lab3](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/freemarker_lab3.png)
+![freemarker_lab3](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/freemarker_lab3.png)
 
 - from the error message, i have known it is a `freemarker` template.
+
 ```
- <#assign ex = "freemarker.template.utility.Execute"?new()>${ ex("id")}
- <#assign ex = "freemarker.template.utility.Execute"?new()>${ ex("cat /etc/passwd")}
- <#assign ex = "freemarker.template.utility.Execute"?new()>${ ex("ls /home/carlos")}
- <#assign ex = "freemarker.template.utility.Execute"?new()>${ ex("rm -r /home/carlos/morale.txt")}
+<#assign ex = "freemarker.template.utility.Execute"?new()>${ ex("id")}
+<#assign ex = "freemarker.template.utility.Execute"?new()>${ ex("cat /etc/passwd")}
+<#assign ex = "freemarker.template.utility.Execute"?new()>${ ex("ls /home/carlos")}
+<#assign ex = "freemarker.template.utility.Execute"?new()>${ ex("rm -r /home/carlos/morale.txt")}
 ```
 ---------------------------------------------------------------------
 
@@ -89,7 +90,7 @@
 
 At the first when it tried this payload `{{7 * 7}}`, I got this error: 
 
-[handlebars_lab4](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/handlebars_lab4.png)
+![handlebars_lab4](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/handlebars_lab4.png)
 
 - i did some searches then i knew it is a `Handlebars` template and we can execute some commands through this code:
 ```
@@ -119,7 +120,7 @@ At the first when it tried this payload `{{7 * 7}}`, I got this error:
 ### Lab5: SSTI with information disclosure via user-supplied objects
 - Ok as usual we caused an error message and we have known this template is working with `django` web framework.
 
-[django_lab5](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/django_lab5.png)
+![django_lab5](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/django_lab5.png)
 
 > It is wrong to enable `DEBUG` during developing your project because it causes the leak of some data and objects in your project.
 - Check out these resources:
@@ -128,7 +129,7 @@ At the first when it tried this payload `{{7 * 7}}`, I got this error:
 
 - So if we run this payload `{% debug %}` in the template, Django will display a detailed traceback, including a lot of metadata about the environment.
 
-[debug_lab5]](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/debug_lab5.png)
+![debug_lab5](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/debug_lab5.png)
 
 - The output will contain a list of objects and properties to which you have access within this template. Crucially, notice that you can access the settings object.
 - When you create a new Django project using `startproject`, the settings.py file is generated automatically, so here notice that you can access the `settings` object.
@@ -142,14 +143,14 @@ At the first when it tried this payload `{{7 * 7}}`, I got this error:
 ### Lab6: SSTI in a sandboxed environment
 - After Detecting if there is an SSTI vulnerability through any payload will evaluate correctly like `${7 * 7}`, now we can identify the template by causing the error:
 
-[sandbox_lab6](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/sandbox_lab6.png)
+![sandbox_lab6](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/sandbox_lab6.png)
 
 - Another one, It is a `freemarker` template engine(java).
 
 > ${product.getClass().getProtectionDomain().getCodeSource().getLocation().toURI().resolve('`File_Path`').toURL().openStream().readAllBytes()?join(" ")}
 - **We will set this path ==> /home/carlos/my_password.txt
  
-[decimal_lab6](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/decimal_lab6.png)
+![decimal_lab6](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/decimal_lab6.png)
 
 - The contents of file will appear as decimal ASCII code then you can convert it to raw form.
 - Check out the [decimal ascci chart](https://www.asciichart.com/).
@@ -167,7 +168,7 @@ At the first when it tried this payload `{{7 * 7}}`, I got this error:
 
 - If you will set any object rather than the intended object, this error message will appear for you.
 
-[missing and null object_lab6](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/missing%20and%20null%20object_lab6.png)
+![missing and null object_lab6](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/missing%20and%20null%20object_lab6.png)
 
 -----------------------------------------------------------------------
 
@@ -175,30 +176,30 @@ At the first when it tried this payload `{{7 * 7}}`, I got this error:
 
 - I captured the requst and tried with some payloads to cause an error in the template.
 
-[Try causing error_lab7](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/Try%20causing%20error_lab7.png)
+![Try causing error_lab7](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/Try%20causing%20error_lab7.png)
 
-[internal server error_lab7](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/internal%20server%20error_lab7.png)
+![internal server error_lab7](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/internal%20server%20error_lab7.png)
 
 - Here we have known it is an `twig` template engine(PHP).
 - And it is an invalid syntax because the template engine never expected to take a `{`  at the end of the statement.
 
-[PoC_lab7](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/PoC_lab7.png)
+![PoC_lab7](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/PoC_lab7.png)
 - Here we injected this payload, and it has been evaluated successfully.
 
-[Done_lab7](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/Done_lab7.png)
+![Done_lab7](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/Done_lab7.png)
 
 - I have tried to upload anything except images to see what will happen, you will see this error, and there is a method that appeared for us is called `setAvatar()`.
 - And we will notice the error discloses about the path of `/home/carlos/User.php`.
 
-[response_lab7](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/response_lab7.png)
+![response_lab7](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/response_lab7.png)
 
 - Ok, let's go to the request for `/my-account/change-blog-post-author-display`, and control into the user object, and use `setAvatar()` method.
 
-[setAvatar_lab7](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/setAvatar_lab7.png)
+![setAvatar_lab7](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/setAvatar_lab7.png)
 
 - This error appeared, it expresses there are 2 arguments are lost in the method.
 
-[needing 2 Arguments_lab7](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/needing%202%20Arguments_lab7.png)
+![needing 2 Arguments_lab7](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/needing%202%20Arguments_lab7.png)
 
 - Now we need to know what are the 2 arguments to use `setAvatar()` method?
 - We will add `/etc/passwd` as an avatar for the first argument.
@@ -207,29 +208,29 @@ At the first when it tried this payload `{{7 * 7}}`, I got this error:
 >**`Take Note`: A media type** (also known as a **Multipurpose Internet Mail Extensions or MIME type**) indicates the nature and format of a document, file, or assortment of bytes.
 Check out: [Common MIME Types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)
 
-[setArguments_lab7](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/setArguments_lab7.png)
+![setArguments_lab7](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/setArguments_lab7.png)
 
 - After inserting your avatar, you have to post in the blog and then write a comment to see if your avatar has been changed.
 - Take the URL for the avatar and run it in your browser.
 - capture the request, and you will see the avatar which you uploaded as `/etc/passwd` it will retrieve the contents of the passwd file.
 - you have to set the mime type with `image/png` to bypass it and not get the error.
 
-[passwd_lab7](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/passwd_lab7.png)
+![passwd_lab7](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/passwd_lab7.png)
 
 - When we noticed the error in the path of `/home/carlaos/User.php`, let's try to know what is the content of the file.
 
-[show content_lab7](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/show%20content_lab7.png)
+![show content_lab7](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/show%20content_lab7.png)
 
-[file_content_lab7](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/file_content_lab7.png)
+![file_content_lab7](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/file_content_lab7.png)
 
 - When we read the file we will find many functions, we will use one of them to delete `/.ssh/id_rsa`.
 - We must access the file which we need to delete.
 
-[acccess_file_lab7.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/acccess_file_lab7.png)
+![acccess_file_lab7.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/acccess_file_lab7.png)
 
 - During reading the content of the file of `User.php`, You will see a function called `gdprDelete()`, we will use it to delete the intended file.
 
-[function_lab7](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/function_lab7.png)
+![function_lab7](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/function_lab7.png)
 - After accessing the file , we will delete it:
 
-[delete file_lab7](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/delete%20file_lab7.png)
+![delete file_lab7](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/delete%20file_lab7.png)
