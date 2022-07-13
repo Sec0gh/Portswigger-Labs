@@ -18,7 +18,7 @@
 - The error tell us, it is an `erb` template.
 - ok, after i detected and idenfied the template, i have read the documentaion of the erb.
 
-> Check out it : [docs.ruby-lang.org](https://docs.ruby-lang.org/en/2.3.0/ERB.html)
+- Check out it : [docs.ruby-lang.org](https://docs.ruby-lang.org/en/2.3.0/ERB.html)
 
 - you can use this syntax to write your code: `<%= someExpression %>`. 
 - you can use the `system()` method to execute arbitrary system commands.
