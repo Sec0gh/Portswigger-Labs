@@ -1,4 +1,12 @@
 # Server-side template injection
+## Summary
+  - [Lab1: Basic server-side template injection](https://github.com/Sec0gh/Portswigger-Labs/tree/main/Server-side%20template%20injection%20Labs#lab1-basic-server-side-template-injection)
+  - [Lab2: Basic SSTI (code context)](https://github.com/Sec0gh/Portswigger-Labs/tree/main/Server-side%20template%20injection%20Labs#lab2-basic-ssti-code-context)
+  - [Lab3: SSTI using documentation](https://github.com/Sec0gh/Portswigger-Labs/tree/main/Server-side%20template%20injection%20Labs#lab3-ssti-using-documentation)
+  - [Lab4: SSTI in an unknown language with a documented exploit](https://github.com/Sec0gh/Portswigger-Labs/tree/main/Server-side%20template%20injection%20Labs#lab4-ssti-in-an-unknown-language-with-a-documented-exploit)
+  - [Lab5: SSTI with information disclosure via user-supplied objects](https://github.com/Sec0gh/Portswigger-Labs/tree/main/Server-side%20template%20injection%20Labs#lab5-ssti-with-information-disclosure-via-user-supplied-objects)
+  - [Lab6: SSTI in a sandboxed environment](https://github.com/Sec0gh/Portswigger-Labs/tree/main/Server-side%20template%20injection%20Labs#lab6-ssti-in-a-sandboxed-environment)
+  - [Lab7: SSTI with a custom exploit](https://github.com/Sec0gh/Portswigger-Labs/tree/main/Server-side%20template%20injection%20Labs#lab7-ssti-with-a-custom-exploit)
 ### Lab1: Basic server-side template injection
 - When we try to view the details of the first product, There is a message appears  in a `message` parameter saying `Unfortunately this product is out of stock`.
 * Generally, We will try to cause an error to know the template engine so, you can try any payload. 
