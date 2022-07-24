@@ -1,6 +1,6 @@
 ## Summary
 - [Lab1: OS command injection, simple case](https://github.com/Sec0gh/Portswigger-Labs/tree/main/OS%20Command%20Injection%20Labs#lab1-os-command-injection-simple-case)
-- [Detecting blind OS command injection using `time delays`](https://github.com/Sec0gh/Portswigger-Labs/tree/main/OS%20Command%20Injection%20Labs#lab2-detecting-blind-os-command-injection-using-time-delays)
+- [Lab2: Detecting blind OS command injection using `time delays`](https://github.com/Sec0gh/Portswigger-Labs/tree/main/OS%20Command%20Injection%20Labs#lab2-detecting-blind-os-command-injection-using-time-delays)
 - [Lab3: Blind OS command injection with `output redirection`](https://github.com/Sec0gh/Portswigger-Labs/tree/main/OS%20Command%20Injection%20Labs#lab3-blind-os-command-injection-with-output-redirection)
 - [Lab4: Blind OS command injection with `out-of-band interaction`](https://github.com/Sec0gh/Portswigger-Labs/tree/main/OS%20Command%20Injection%20Labs#lab4-blind-os-command-injection-with-out-of-band-interaction)
 - [Lab5: Blind OS command injection with `out-of-band data exfiltration`](https://github.com/Sec0gh/Portswigger-Labs/tree/main/OS%20Command%20Injection%20Labs#lab5-blind-os-command-injection-with-out-of-band-data-exfiltration)
