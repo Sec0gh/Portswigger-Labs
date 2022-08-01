@@ -68,7 +68,7 @@ SELECT * FROM users WHERE username = '' OR 1=1--' AND password = ''
 ### Lab3: SQL injection UNION attack, determining the number of columns returned by the query
 >  `Note:` To combine two `select` statements with the `UNION`  operator:
 >  1. We must return the same number of columns in the 2 `select` statements.
->  2. The 2 quires result must have the same or compatible data types, appearing in the same order.
+>  2. The 2 queries result must have the same or compatible data types, appearing in the same order.
 
 - So one of the most common ways to detect the number of columns in the select statement is using the `NULL` values. 
 - There is another way with using the `order by clause`.
