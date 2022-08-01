@@ -7,7 +7,7 @@
 	- [Lab5: SQL injection UNION attack, retrieving data from other tables](https://github.com/Sec0gh/Portswigger-Labs/blob/main/SQL%20Injection%20Labs/In-Band%20SQL%20Injection/README.md#lab5-sql-injection-union-attack-retrieving-data-from-other-tables)
 	- [Lab6: SQL injection UNION attack, retrieving multiple values in a single column](https://github.com/Sec0gh/Portswigger-Labs/blob/main/SQL%20Injection%20Labs/In-Band%20SQL%20Injection/README.md#lab6-sql-injection-union-attack-retrieving-multiple-values-in-a-single-column)
 
-## `Notice:` I suggest being familiar with SQL before reading these labs.
+## `Notice:` I suggest being familiar with SQL before reading the labs solutions.
 
 ### Lab1: SQL injection vulnerability in WHERE clause allowing retrieval of hidden data
 - In the first, If we set this specific character `'`, the server will reply with `Internal Server Error`.
