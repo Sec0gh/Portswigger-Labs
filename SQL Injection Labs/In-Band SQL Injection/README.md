@@ -1,11 +1,11 @@
 ## Summary
-- [Lab1: SQL injection vulnerability in WHERE clause allowing retrieval of hidden data]()
-- [Lab2: SQL injection vulnerability allowing login bypass]()
-- [SQL injection UNION attacks]()
-	- [Lab3: SQL injection UNION attack, determining the number of columns returned by the query]()
-	- [Lab4: SQL injection UNION attack, finding a column containing text]()
-	- [Lab5: SQL injection UNION attack, retrieving data from other tables]()
-	- [Lab6: SQL injection UNION attack, retrieving multiple values in a single column]()
+- [Lab1: SQL injection vulnerability in WHERE clause allowing retrieval of hidden data](https://github.com/Sec0gh/Portswigger-Labs/tree/main/SQL%20Injection%20Labs/In-Band%20SQL%20Injection#lab1-sql-injection-vulnerability-in-where-clause-allowing-retrieval-of-hidden-data)
+- [Lab2: SQL injection vulnerability allowing login bypass](https://github.com/Sec0gh/Portswigger-Labs/tree/main/SQL%20Injection%20Labs/In-Band%20SQL%20Injection#lab2-sql-injection-vulnerability-allowing-login-bypass)
+- [SQL injection UNION attacks](https://github.com/Sec0gh/Portswigger-Labs/blob/main/SQL%20Injection%20Labs/In-Band%20SQL%20Injection/README.md#sql-injection-union-attacks)
+	- [Lab3: SQL injection UNION attack, determining the number of columns returned by the query](https://github.com/Sec0gh/Portswigger-Labs/blob/main/SQL%20Injection%20Labs/In-Band%20SQL%20Injection/README.md#lab3-sql-injection-union-attack-determining-the-number-of-columns-returned-by-the-query)
+	- [Lab4: SQL injection UNION attack, finding a column containing text](https://github.com/Sec0gh/Portswigger-Labs/blob/main/SQL%20Injection%20Labs/In-Band%20SQL%20Injection/README.md#lab4-sql-injection-union-attack-finding-a-column-containing-text)
+	- [Lab5: SQL injection UNION attack, retrieving data from other tables](https://github.com/Sec0gh/Portswigger-Labs/blob/main/SQL%20Injection%20Labs/In-Band%20SQL%20Injection/README.md#lab5-sql-injection-union-attack-retrieving-data-from-other-tables)
+	- [Lab6: SQL injection UNION attack, retrieving multiple values in a single column](https://github.com/Sec0gh/Portswigger-Labs/blob/main/SQL%20Injection%20Labs/In-Band%20SQL%20Injection/README.md#lab6-sql-injection-union-attack-retrieving-multiple-values-in-a-single-column)
 
 ## `Notice:` I suggest being familiar with SQL before reading these labs.
 
@@ -128,7 +128,7 @@ category=' union select username, password from users--
 ```
 - Here we can see the results from my injected query, and now we can log in as the `administrator` user.
 
-![[lab5.png]]
+![lab5.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/SQL%20Injection%20Labs/images/In-Band%20SQLi%20images/lab5.png)
 
 -----------------------------------------------------------------------
 ### Lab6: SQL injection UNION attack, retrieving multiple values in a single column
@@ -151,10 +151,11 @@ category=' union select null, username ||'~'|| password from users--
 ```
 - `Note:` You can set any specific character to separate columns other than `~`.
 
-![[lab6.png]]
+![lab6.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/SQL%20Injection%20Labs/images/In-Band%20SQLi%20images/lab6.png)
 
 - Or you can make something like that by concatenating😃
 ```
 category=' union select null, 'User: '|| username ||' and password: '|| password from users--
 ```
-![[lab6_another_form.png]]
+
+![lab6_another_form.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/SQL%20Injection%20Labs/images/In-Band%20SQLi%20images/lab6_another_form.png)
