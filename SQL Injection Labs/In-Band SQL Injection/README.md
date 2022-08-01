@@ -64,7 +64,7 @@ SELECT * FROM users WHERE username = '' OR 1=1--' AND password = ''
 ```
 
 -----------------------------------------------------------------------
-
+## SQL injection UNION attacks
 ### Lab3: SQL injection UNION attack, determining the number of columns returned by the query
 >  `Note:` to combine two `select` statements with the `UNION`  operator:
 	1. We must return the same number of columns in the 2 `select` statements.
