@@ -120,7 +120,7 @@ category=' union select null,null--
 ```
 category=' union select 'hello',null--
 ```
-- In real-world scenarios, you must know the names of the tables and columns containing the data you want to access, in the next labs we will know how to know that, but in this lab description, we know the name of the table and the columns which we will retrieve.
+- **In real-world scenarios, you must know the type and version of the database software, and the names of the tables and columns containing the data you want to access, in the next labs we will know how to know that, but in this lab description, we know the name of the table and the columns which we will retrieve.**
 3. And the last phase is retrieving the data from the `user` table:
 
 ```
@@ -145,7 +145,8 @@ category=' union select username, password from users--
 ```
 - Because the first column is not string data type.
 - The solution for this problem is combining the results of the 2 columns in one column by concatenating them with `||`.
-
+- You can use `||` to concatenate strings in the oracle database, but it is different in the other database types.
+- Don't worry, in the next labs you will know how to detect the type of database to identify your syntax and the methodology to deal with it.
 ```
 category=' union select null, username ||'~'|| password from users--
 ```
