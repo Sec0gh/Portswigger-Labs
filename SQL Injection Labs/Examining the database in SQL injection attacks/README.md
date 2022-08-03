@@ -132,4 +132,4 @@ category=' union select USERNAME_EXOKDN, PASSWORD_YEICFS from USERS_ZXHNHP--
 ![lab10.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/SQL%20Injection%20Labs/images/lab10.png)
 
 
-[![I got you](https://tenor.com/view/the-batman-penguin-i-got-you-gotcha-colin-farrell-gif-26355363)]
+![I got you](https://c.tenor.com/gJto5WLSSVEAAAAC/the-batman-penguin.gif)
