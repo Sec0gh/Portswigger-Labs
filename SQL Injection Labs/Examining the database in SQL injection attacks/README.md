@@ -8,7 +8,7 @@
 > 1. **If we will test an oracle database, we must use a `dual` special table during selecting null values because it will get an error if we selected anything even if it was the right thing for a number of columns.** 
 > 2. **`dual` table used for evaluating expressions or calling functions.**
 - Check out: [oracle-dual-table](https://www.oracletutorial.com/oracle-basics/oracle-dual-table/)
-- Check out: [docs.oracle.com/](https://docs.oracle.com/cd/B19306_01/server.102/b14200/queries009.htm)
+- Check out: [docs.oracle.com](https://docs.oracle.com/cd/B19306_01/server.102/b14200/queries009.htm)
 - We will track our methodology and test in the first the number of columns used in the query of the application:
 
 ```
