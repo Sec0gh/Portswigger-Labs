@@ -1,3 +1,4 @@
+# In-Band SQL Injection
 ## Summary
 - [Lab1: SQL injection vulnerability in WHERE clause allowing retrieval of hidden data](https://github.com/Sec0gh/Portswigger-Labs/tree/main/SQL%20Injection%20Labs/In-Band%20SQL%20Injection#lab1-sql-injection-vulnerability-in-where-clause-allowing-retrieval-of-hidden-data)
 - [Lab2: SQL injection vulnerability allowing login bypass](https://github.com/Sec0gh/Portswigger-Labs/tree/main/SQL%20Injection%20Labs/In-Band%20SQL%20Injection#lab2-sql-injection-vulnerability-allowing-login-bypass)
