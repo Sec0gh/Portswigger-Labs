@@ -1,7 +1,7 @@
 # Blind SQL injection-Boolean Based
 ## Summary
-- [Lab11: Blind SQL injection with conditional responses]()
-- [Lab12: Blind SQL injection with conditional errors]()
+- [Lab11: Blind SQL injection with conditional responses](https://github.com/Sec0gh/Portswigger-Labs/tree/main/SQL%20Injection%20Labs/Blind%20SQL%20injection/Blind%20SQLi%20-%20Boolean%20Based#lab11-blind-sql-injection-with-conditional-responses)
+- [Lab12: Blind SQL injection with conditional errors](https://github.com/Sec0gh/Portswigger-Labs/tree/main/SQL%20Injection%20Labs/Blind%20SQL%20injection/Blind%20SQLi%20-%20Boolean%20Based#lab12-blind-sql-injection-with-conditional-errors)
 
 ### Lab11: Blind SQL injection with conditional responses
 - In Blind SQL injection, the application doesn't reply with the results of the query which we injected so we don't see any messages from the server to help us to detect the error to bypass it. 
