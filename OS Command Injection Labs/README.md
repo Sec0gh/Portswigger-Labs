@@ -55,7 +55,7 @@ email=injection%40gmail.com & ping -c 10 127.0.0.1 #&subject=...
 
 -----------------------------------------------------------------------
 ### Lab4: Blind OS command injection with `out-of-band interaction`
-- In this technique, we will try o make the server interact with any server we can control and monitor in order to make sure that the server has sent the request to our server and executed the injected command which we passed into the web application.
+- In this technique, we will try to make the server interact with any server we can control and monitor in order to make sure that the server has sent the results to our server and executed the injected command which we passed into the web application.
 - So we can use `ping` to make any request and interact with the domain of our server, or make `nslookup` for the domain to resolve it to the IP address.
 - Then we will monitor whether the requests succeeded or not.
 

