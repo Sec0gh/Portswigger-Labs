@@ -35,6 +35,10 @@ SELECT * FROM products WHERE category = 'any_category' OR 1=1--' AND released = 
 ```
 category=' OR '1'='1
 ```
+- Then the query will be in the backend like that:
+```SQL
+SELECT * FROM products WHERE category = 'any_category'' OR '1'='1' AND released = 1
+```
 -----------------------------------------------------------------------
 
 ### Lab2: SQL injection vulnerability allowing login bypass
