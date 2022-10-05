@@ -4,7 +4,7 @@
 - [Lab2: Username enumeration via subtly different responses](#lab2-username-enumeration-via-subtly-different-responses)
 - [Lab3: Username enumeration via response timing](#lab3-username-enumeration-via-response-timing)
 - [Lab4: Broken brute-force protection, IP block](#lab4-broken-brute-force-protection-ip-block)
-
+- [Lab6: Broken brute-force protection, multiple credentials per request]()
 
 > `Please note: All labs can be solved with burb intruder but somtimes we will solve it by automate the lab with python.`
 
