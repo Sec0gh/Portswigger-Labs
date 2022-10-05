@@ -16,6 +16,7 @@
 - I have written a python script to do that automatically.
 - Check out my script from here: [Lab1_username&password_auth.py](https://github.com/Sec0gh/python-scripts/blob/main/Authentication%20scripts/Lab1_username%26password_auth.py)
 - The output will look like that:
+
 ![Authentication Labs/images/lab1.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Authentication%20Labs/images/lab1.png)
 
 ------------
@@ -27,6 +28,7 @@
 ![lab2_username.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Authentication%20Labs/images/lab2_username.png)
 
 - Check out my script: [Lab2_username&password_auth.py](https://github.com/Sec0gh/python-scripts/blob/main/Authentication%20scripts/Lab2_username%26password_auth.py)
+
 ![lab2.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Authentication%20Labs/images/lab2.png)
 
 ------------
@@ -46,15 +48,18 @@
 ![lab3_intruder_password.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Authentication%20Labs/images/lab3_intruder_password.png)
 
 - During trying to filter the responses to catch the password we will see there is a response with a status code of `302`, it is a redirection that happened.
+
 ![lab3_password.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Authentication%20Labs/images/lab3_password.png)
 - Here, we used Burp suite to solve the lab but **You can see my script which I wrote to perform this task:** [Lab3_ResponseTiming](https://github.com/Sec0gh/python-scripts/blob/main/Authentication%20scripts/Lab3_ResponseTiming.py)
 -----------
 
 ### Lab4: Broken brute-force protection, IP block
 - Here, we will exploit a flaw in the brute-force attack protection, where it will block your IP address if you tried to login in after many failed login attempts.
+
 ![lab4_block.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Authentication%20Labs/images/lab4_block.png)
 - So we can log in with our account to reset the counter of the number of failed login attempts.
 - We can log in with the right credentials of our account and send it to reset the counter after every failed attempt, then it will let me complete my brute-force attack.
 - I wrote my script to do this task check out it from here: [Lab4_BypassBlockingIP](https://github.com/Sec0gh/python-scripts/blob/main/Authentication%20scripts/Lab4_BypassBlockingIP.py)
 - The output will appear like that:
+
 ![lab4.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Authentication%20Labs/images/lab4.png)
