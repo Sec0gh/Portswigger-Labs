@@ -87,8 +87,8 @@ print(MyPayload)
 ```
 - You will find the output of the script is an array of password credentials.
 
-![Lab6_payload.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Authentication%20Labs/images/Lab6_PasswordsList.png)
+![Lab6_payload.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Authentication%20Labs/images/Lab6_payload.png)
 - Replace the single value of the password with this array and send it.
 
-![Lab6_PasswordsList.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Authentication%20Labs/images/Lab6_payload.png)
+![Lab6_PasswordsList.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Authentication%20Labs/images/Lab6_PasswordsList.png)
 - Go again to the login page, and you will find yourself logged in.
