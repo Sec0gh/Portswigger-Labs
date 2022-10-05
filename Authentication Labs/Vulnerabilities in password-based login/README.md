@@ -75,7 +75,7 @@
 - We will need to create a probable list of the passwords in an array to send it as multiple credentials per request.
 ```python
 passwords_list=[] # To make my array list of passwords.
-with open("/home/sec0gh/Desktop/passwords.txt","r") as file: # Modify it with the passwords list path.
+with open("/PATH/passwords.txt","r") as file: # Modify it with the passwords list path.
   for password in file:
     password = password.strip()
     passwords_list.append(password)
