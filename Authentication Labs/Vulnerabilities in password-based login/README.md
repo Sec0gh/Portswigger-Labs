@@ -4,7 +4,7 @@
 - [Lab2: Username enumeration via subtly different responses](#lab2-username-enumeration-via-subtly-different-responses)
 - [Lab3: Username enumeration via response timing](#lab3-username-enumeration-via-response-timing)
 - [Lab4: Broken brute-force protection, IP block](#lab4-broken-brute-force-protection-ip-block)
-- [Lab6: Broken brute-force protection, multiple credentials per request]()
+- [Lab6: Broken brute-force protection, multiple credentials per request](#lab6-broken-brute-force-protection-multiple-credentials-per-request)
 
 
 > `Please note: All labs can be solved with burb intruder but somtimes we will solve it by automate the lab with python.`
@@ -75,22 +75,14 @@
 - We will need to create a probable list of the passwords in an array to send it as multiple credentials per request.
 ```python
 passwords_list=[] # To make my array list of passwords.
-
-  
-
 with open("/home/sec0gh/Desktop/passwords.txt","r") as file: # Modify it with the passwords list path.
+  for password in file:
+    password = password.strip()
+    passwords_list.append(password)
+  # print(passwords_list)
 
-for password in file:
-
-password = password.strip()
-
-passwords_list.append(password)
-
-# print(passwords_list)
 passwords_list = str(passwords_list)
-
 MyPayload = passwords_list.replace("'","\"")
-
 print(MyPayload)
 ```
 - You will find the output of the script is an array of password credentials.
