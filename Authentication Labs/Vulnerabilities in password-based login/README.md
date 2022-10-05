@@ -6,6 +6,7 @@
 - [Lab4: Broken brute-force protection, IP block](#lab4-broken-brute-force-protection-ip-block)
 - [Lab6: Broken brute-force protection, multiple credentials per request]()
 
+
 > `Please note: All labs can be solved with burb intruder but somtimes we will solve it by automate the lab with python.`
 
 ### Lab1: Username enumeration via different responses
@@ -63,3 +64,39 @@
 - The output will appear like that:
 
 ![lab4.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Authentication%20Labs/images/lab4.png)
+
+------
+### Lab6: Broken brute-force protection, multiple credentials per request
+- One of the methodologies of protection against brute force attacks is `user rate limiting` which restricts the users to send a specific number of requests at a particular time.
+- So in this lab, we will use a technique to send multiple values of passwords and test them in just one request to bypass this protection.
+- If you interrupt the request, You will find the login credentials are sent in `JSON` format.
+
+![Lab6_jsonData.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Authentication%20Labs/images/Lab6_jsonData.png)
+- We will need to create a probable list of the passwords in an array to send it as multiple credentials per request.
+```python
+passwords_list=[] # To make my array list of passwords.
+
+  
+
+with open("/home/sec0gh/Desktop/passwords.txt","r") as file: # Modify it with the passwords list path.
+
+for password in file:
+
+password = password.strip()
+
+passwords_list.append(password)
+
+# print(passwords_list)
+passwords_list = str(passwords_list)
+
+MyPayload = passwords_list.replace("'","\"")
+
+print(MyPayload)
+```
+- You will find the output of the script is an array of password credentials.
+
+![Lab6_payload.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Authentication%20Labs/images/Lab6_PasswordsList.png)
+- Replace the single value of the password with this array and send it.
+
+![Lab6_PasswordsList.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Authentication%20Labs/images/Lab6_payload.png)
+- Go again to the login page, and you will find yourself logged in.
