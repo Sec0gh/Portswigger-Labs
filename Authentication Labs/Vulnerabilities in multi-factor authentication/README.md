@@ -18,7 +18,7 @@
 ---
 ### Lab8: 2FA broken logic
 ##### **Understanding the behavior of the web application**
-- In first, during logging in with the credentials of `wiener:peter`,  the web app will set cookies in the `verify` parameter with the same username which I used to log in.
+- In first, during logging in with the credentials of `wiener:peter`,  the web app will set cookie in the `verify` parameter with the same username which I used to log in.
 
 ![Lab8_login.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Authentication%20Labs/images/Lab8_login.png)
 - Then it will redirect me to the `/login2` page to enter my verification code with my cookie of `wiener` which is in the `verify` parameter where the web application identifies and verifies from the user intended with its cookie.
