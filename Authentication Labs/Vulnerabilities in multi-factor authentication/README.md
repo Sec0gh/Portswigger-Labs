@@ -11,7 +11,7 @@
 
 ![securityCode.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Authentication%20Labs/images/securityCode.png)
 - When we get the `security code` from the email server and enter that, it will redirect us to `/my-account` page.
-##### **How do we exploit that?**
+
 - Now I logged out from my account and then I will access the account of the victim and the credentials are `carlos:montoy`.
 - After logging in with these credentials try to access `/my-account` page directly without entering the security code.
 - You will find yourself in a `logged in` state and, you accessed the `carlos` account before entering the verification code.
