@@ -67,7 +67,7 @@
 
 ----
 ### Lab5: Inconsistent handling of exceptional input
-- My email address which I will register with it is: 
+- The email address for us from the web security academy will be like that where we will register with this email : 
 > attacker@exploit-0a18009203351792c05c09e3015f00d9.exploit-server.net 
 - The most important thing is testing and understanding the behavior and action of the application.
 - Now I will register:
@@ -109,5 +109,5 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 ![Lab5_attacker.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Business%20Logic%20Vulnerabilities%20Labs/images/Lab5_attacker.png)
 - After successfully registering, you can log in with your username and password, and finally, you will find you can access the admin panel.
 
-![[lab5_AttackSucceeded.png]]
+![lab5_AttackSucceeded.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Business%20Logic%20Vulnerabilities%20Labs/images/lab5_AttackSucceeded.png)
 - Go to the admin panel and delete the `Carlos` user.
