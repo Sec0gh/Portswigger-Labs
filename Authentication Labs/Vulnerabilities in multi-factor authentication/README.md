@@ -41,5 +41,5 @@
 - Show response in the browser, you will find yourself in a `logged in` state, and the lab is solved.
 
 - Also, I wrote python a script to automate the 2FA verification code,you can check it.
--`Check out:` [Lab8_2FABrokenLogic.py](https://github.com/Sec0gh/python-scripts/blob/main/Authentication%20scripts/Lab8_2FABrokenLogic.py)
+- `Check out:` [Lab8_2FABrokenLogic.py](https://github.com/Sec0gh/python-scripts/blob/main/Authentication%20scripts/Lab8_2FABrokenLogic.py)
 
