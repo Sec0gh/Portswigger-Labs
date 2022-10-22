@@ -1,4 +1,4 @@
-# Business Logic Vulnerabilities
+# Business Logic Vulnerabilities - Excessive trust in client-side controls
 ## Summary
 - [Lab1: Excessive trust in client-side controls](#lab1-excessive-trust-in-client-side-controls)
 - [Lab2: 2FA broken logic](#lab2-2fa-broken-logic)
