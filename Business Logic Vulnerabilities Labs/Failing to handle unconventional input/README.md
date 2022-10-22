@@ -1,4 +1,4 @@
-# Failing to handle unconventional input
+# Business Logic Vulnerabilities - Failing to handle unconventional input
 ## Summary
 - [Lab3: High-level logic vulnerability](#lab3-high-level-logic-vulnerability)
 - [Lab4: Low-level logic flaw](#lab4-low-level-logic-flaw)
