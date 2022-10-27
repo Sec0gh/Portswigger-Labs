@@ -49,10 +49,10 @@ https://0a7b00ea03fc3d92c06df30f00a5001d.web-security-academy.net/forgot-passwor
 ### Lab14: Password brute-force via password change
 - You will log in with these credentials: `wiener:peter`.
 - Then you will find the password change page, after some tests you will notice some messages appear for you.
-- if you entered the correct current password and a new password in the 2 parameters `new-password-1` and `new-password-2` matching themself, the password will change successfully.
+- If you entered the correct current password and a new password in the 2 parameters `new-password-1` and `new-password-2` matching themself, the password will change successfully.
 
 ![Lab14_changedSuccessfully.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Authentication%20Labs/images/Lab14_changedSuccessfully.png)
-- if you entered the wrong current password and two new passwords match, the account will lock and redirect you to the log-in page again.
+- If you entered the wrong current password and two new passwords match, the account will lock and redirect you to the log-in page again.
 - But if you entered the wrong current password and two different new passwords, this error message will appear to tell you the current password is incorrect.
 
 ![Lab14_passwordIncorrect.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Authentication%20Labs/images/Lab14_passwordIncorrect.png)
