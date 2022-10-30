@@ -1,13 +1,12 @@
 # Making flawed assumptions about user behavior
 
 ## Summary 
-- [Lab6: Inconsistent security controls]()
-- [Lab7: Weak isolation on dual-use endpoint]()
-- [Lab8: Password reset broken logic]()
-- [Lab9: 2FA simple bypass]()
-- [Lab10: Insufficient workflow validation]()
-- [Lab11: Authentication bypass via flawed state machine]()
-
+- [Lab6: Inconsistent security controls](#lab6-inconsistent-security-controls)
+- [Lab7: Weak isolation on dual-use endpoint](#lab7-weak-isolation-on-dual-use-endpoint)
+- [Lab8: Password reset broken logic](#lab8-password-reset-broken-logic)
+- [Lab9: 2FA simple bypass](#lab9-2fa-simple-bypass)
+- [Lab10: Insufficient workflow validation](#lab10-insufficient-workflow-validation)
+- [Lab11: Authentication bypass via flawed state machine](#lab11-authentication-bypass-via-flawed-state-machine)
 
 ### Lab6: Inconsistent security controls
 - At first, we need to register with our email but we can not use the domain of `@dontwannacry.com` in the registration, because we won't receive the confirmation link to complete the registration and we don't work for DontWannaCry.
