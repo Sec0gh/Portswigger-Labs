@@ -40,7 +40,7 @@
 - Check out here: [Password reset broken logic](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Authentication%20Labs/Vulnerabilities%20in%20other%20authentication%20mechanisms/README.md#lab12-password-reset-broken-logic)
 ---
 ### Lab9: 2FA simple bypass
-- You can check out the solution for this lab from multi-factor authentication vulnerabilities labs.
+- You can check out the solution for this lab from `multi-factor authentication vulnerabilities` labs.
 - check out here: [2FA simple bypass](https://github.com/Sec0gh/Portswigger-Labs/tree/main/Authentication%20Labs/Vulnerabilities%20in%20multi-factor%20authentication#lab7-2fa-simple-bypass)
 ---
 ### Lab10: Insufficient workflow validation
