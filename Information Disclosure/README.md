@@ -64,7 +64,7 @@ curl -X GET https://web-security-academy.net/admin/delete?username=carlos -H "X-
 ```
 ---
 ### Lab5: Information disclosure in version control history
-- From the lab name it talks about the version control systems and its histories such as `Git & GitHub` which is being in the `/.git` directory.
+- From the lab name it talks about the version control systems and their histories such as `Git & GitHub` which is being in the `/.git` directory.
 
 > Version control system: keeps track of the changes we make to our files, and we can make edits to multiple files and treat a collection of edits as a single change, which is commenly known as a `commit`.
 
