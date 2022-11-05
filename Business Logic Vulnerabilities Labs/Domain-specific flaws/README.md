@@ -1,7 +1,7 @@
 # Domain-specific flaws
 ## Summary
-- [Lab12: Flawed enforcement of business rules]()
-- [Lab13: Infinite money logic flaw]()
+- [Lab12: Flawed enforcement of business rules](#lab12-flawed-enforcement-of-business-rules)
+- [Lab13: Infinite money logic flaw](#lab13-infinite-money-logic-flaw)
 
 ### Lab12: Flawed enforcement of business rules
 - You will log in with your credentials `wiener:peter`.
