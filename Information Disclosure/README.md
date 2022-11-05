@@ -1,10 +1,10 @@
 # Information Disclosure
 ## Summary
-- [Lab1: Information disclosure in error messages]()
-- [Lab2: Information disclosure on debug page]()
-- [Lab3: Source code disclosure via backup files]()
-- [Lab4: Authentication bypass via information disclosure]()
-- [Lab5: Information disclosure in version control history]()
+- [Lab1: Information disclosure in error messages](#lab1-information-disclosure-in-error-messages)
+- [Lab2: Information disclosure on debug page](#lab2-information-disclosure-on-debug-page)
+- [Lab3: Source code disclosure via backup files](#lab3-source-code-disclosure-via-backup-files)
+- [Lab4: Authentication bypass via information disclosure](#lab4-authentication-bypass-via-information-disclosure)
+- [Lab5: Information disclosure in version control history](#lab5-information-disclosure-in-version-control-history)
 
 ### Lab1: Information disclosure in error messages
 - I have just tried to causing an error in the `product Id` parameter by adding single quote.
