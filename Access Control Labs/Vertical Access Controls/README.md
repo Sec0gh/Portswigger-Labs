@@ -1,15 +1,15 @@
 # Vertical Access Controls
 
 ## Summary
-- #### Unprotected functionality
-	- [Lab1: Unprotected admin functionality]()
-	- [Lab2: Unprotected admin functionality with unpredictable URL]()
-- #### Parameter-based access control methods
-	- [Lab3: User role controlled by request parameter]()
-	- [Lab4: User role can be modified in user profile]()
-- #### Broken access control resulting from platform misconfiguration
-	- [Lab5: URL-based access control can be circumvented]()
-	- [Lab6: Method-based access control can be circumvented]()
+- ### [Unprotected functionality](#unprotected-functionality-1)
+	- [Lab1: Unprotected admin functionality](#lab1-unprotected-admin-functionality)
+	- [Lab2: Unprotected admin functionality with unpredictable URL](#lab2-unprotected-admin-functionality-with-unpredictable-url)
+- ### [Parameter-based access control methods](#parameter-based-access-control-methods-1)
+	- [Lab3: User role controlled by request parameter](#lab3-user-role-controlled-by-request-parameter)
+	- [Lab4: User role can be modified in user profile](#lab4-user-role-can-be-modified-in-user-profile)
+- ### [Broken access control resulting from platform misconfiguration](#broken-access-control-resulting-from-platform-misconfiguration-1)
+	- [Lab5: URL-based access control can be circumvented](#lab5-url-based-access-control-can-be-circumvented)
+	- [Lab6: Method-based access control can be circumvented](#lab6-method-based-access-control-can-be-circumvented)
 
 ## Unprotected functionality
 ### Lab1: Unprotected admin functionality
@@ -52,8 +52,8 @@
 ## Broken access control resulting from platform misconfiguration
 ### Lab5: URL-based access control can be circumvented
 - If you sent any normal request to access the admin panel, you will get an error message `"Access denied"`.
-> ==Some applications support non-standard headers such as X-Original-URL or X-Rewrite-URL in order to allow overriding the target URL in requests with the one specified in the header value.==
-> Check out [owasp.org](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/02-Testing_for_Bypassing_Authorization_Schema)
+- ==Some applications support non-standard headers such as X-Original-URL or X-Rewrite-URL in order to allow overriding the target URL in requests with the one specified in the header value.==
+- Check out [owasp.org](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/02-Testing_for_Bypassing_Authorization_Schema)
 - We can exploit these headers to access the specific URLs which we can not access.
 - To detect the support for the header `X-Original-URL`, you will find the backend responded with a `Not Found` message, it is meaning the server deal with the URL which I added to the header.
 
