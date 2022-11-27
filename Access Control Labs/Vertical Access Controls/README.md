@@ -54,11 +54,11 @@
 - If you sent any normal request to access the admin panel, you will get an error message `"Access denied"`.
 > Some applications support non-standard headers such as X-Original-URL or X-Rewrite-URL in order to allow overriding the target URL in requests with the one specified in the header value.
 > Check out [owasp.org](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/02-Testing_for_Bypassing_Authorization_Schema)
-- We can exploit these headers to access the specific URLs which we can not access.
+- We can use these headers to access the specific URLs which we can not access.
 - To detect the support for the header `X-Original-URL`, you will find the backend responded with a `Not Found` message, it is meaning the server deal with the URL which I added to the header.
 
 ![Lab5_donotExist.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Access%20Control%20Labs/images/Lab5_donotExist.png)
-- Go to add the `/admin` to the header, it will let you access the admin panel.
+- Go to add the `/admin` URL to the header, it will let you access the admin panel.
 
 ![Lab5_AccessAdminPanel.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Access%20Control%20Labs/images/Lab5_AccessAdminPanel.png)
 - To delete the `carlos` user, you need to set the path of deleting users `/admin/delete` in the header, and then in the real `GET` URL add the `username` parameter and its value.
