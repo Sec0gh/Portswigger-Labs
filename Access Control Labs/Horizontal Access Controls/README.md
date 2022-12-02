@@ -35,6 +35,7 @@ id=3a3d3c87-4081-436e-97df-f44e3816e0eb
 ![Lab9_ LeakageInRedirect.png](https://github.com/Sec0gh/Portswigger-Labs/blob/main/Access%20Control%20Labs/images/Lab9_%20LeakageInRedirect.png)
 - During the web app redirecting you to the `/login` page, it discloses information in the traffic about `carlos` and his API key.
 ----
+## Horizontal to vertical privilege escalation
 ### Lab10: User ID controlled by request parameter with password disclosure
 - Log in with credentials of `wiener:peter`.
 - The `/my-account` page contains functionality to update the password.
