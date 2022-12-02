@@ -3,7 +3,8 @@
 - [Lab7: User ID controlled by request parameter](#lab7-user-id-controlled-by-request-parameter)
 - [Lab8: User ID controlled by request parameter, with unpredictable user IDs](#lab8-user-id-controlled-by-request-parameter-with-unpredictable-user-ids)
 - [Lab9: User ID controlled by request parameter with data leakage in redirect](#lab9-user-id-controlled-by-request-parameter-with-data-leakage-in-redirect)
-- [Lab10: User ID controlled by request parameter with password disclosure](#lab10-user-id-controlled-by-request-parameter-with-password-disclosure)
+- ### Horizontal to vertical privilege escalation
+	- [Lab10: User ID controlled by request parameter with password disclosure](#lab10-user-id-controlled-by-request-parameter-with-password-disclosure)
 - [Lab11: Insecure direct object references](#lab11-insecure-direct-object-references)
 
 ### Lab7: User ID controlled by request parameter
